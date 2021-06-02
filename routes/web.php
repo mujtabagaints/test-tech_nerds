@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', 'StudentController@index');
+Route::get('/courses/all', 'CourseController@index');
+Route::get('/student/courses/all', 'StudentCourseController@index');
